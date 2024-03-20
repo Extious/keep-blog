@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Extious">
+    
+    <title>
+        
+            云原生概述 |
+        
+        Extious&#39; blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"zhaozhan.site","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Extious' blog","author":"Extious","avatar":"/images/favicon.ico","logo":"/images/favicon.ico","favicon":"/images/favicon.ico"},"menu":{"Archives":"/archives","Tags":"/tags","Categories":"/categories","Links":"/links","About":"/about"},"first_screen":{"enable":true,"background_img_dark":"/images/bg.svg","background_img":"/images/bg.svg","description":"所有命运的馈赠 || 都早已在暗中标注好了价格","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/Extious","qq":"img | /images/qq.png","zhihu":"https://www.zhihu.com/people/Extious"}},"scroll":{"progress_bar":false,"percent":true,"hide_header":true},"home":{"category":true,"tag":true,"announcement":null},"post":{"author_badge":{"enable":false,"level_badge":false},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"img_align":"center","reward":{"enable":true,"img_link":"/images/wechat.png","text":"请作者喝咖啡"}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":null,"word_count":true,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","links":[{"title":"友链"},"......"],"version":"4.0.6"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Keep" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/favicon.ico">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Extious&#39; blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a class=""
+                           href="/"
+                        >首页</a>
+                    </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >归档</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >标签</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >分类</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >友链</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >关于</a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            <li class="drawer-menu-item flex-center">
+                <a class=""
+                   href="/"
+                >首页</a>
+            </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links"
+                    >友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        云原生概述
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/favicon.ico">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Extious</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-02-19 18:04:47</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Feb 21 2024 03:05:11 GMT+0000">2024-02-21 11:05:11</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/">系统架构</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/">系统架构</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>6 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="云原生的出现"><a href="#云原生的出现" class="headerlink" title="云原生的出现"></a>云原生的出现</h1><h2 id="云计算的发展"><a href="#云计算的发展" class="headerlink" title="云计算的发展"></a>云计算的发展</h2><p>云计算的发展大致分为三个阶段：</p>
+<p>虚拟化的出现-&gt;虚拟化的应用-&gt;容器化</p>
+<ol>
+<li><h3 id="虚拟化技术"><a href="#虚拟化技术" class="headerlink" title="虚拟化技术"></a>虚拟化技术</h3></li>
+</ol>
+<p>表示将计算机资源分成逻辑组的技术</p>
+<p>同一台物理机器上运行多个虚拟机</p>
+<ol start="2">
+<li><h3 id="虚拟机的市场化应用"><a href="#虚拟机的市场化应用" class="headerlink" title="虚拟机的市场化应用"></a>虚拟机的市场化应用</h3></li>
+</ol>
+<p>亚马逊AWS在2006年公开发布S3存储服务、SQS消息队列及EC2虚拟机服务，正式宣告了现代云计算的到来</p>
+<p>云服务的三种模型满足了不同消费者的需求：</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://extious.github.io/picx-images-hosting/%E5%9B%BE%E7%89%87.ibujsdlvx.webp"
+                        alt="图片"
+                 ></p>
+<ul>
+<li>IaaS：基础设施服务，主要提供基础的硬件资源</li>
+<li>PaaS：平台服务，提供软件部署平台，开发者只需关注自己的业务逻辑，不需要关系硬件和操作系统细节</li>
+<li>SaaS：软件服务，提供一系列服务，拿来即用</li>
+</ul>
+<p>更多请查看：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43972437/article/details/103307609" >IaaS、PaaS、SaaS、BaaS、FaaS和Serverless的含义<i class="fas fa-external-link-alt"></i></a></p>
+<ol start="3">
+<li><h3 id="容器化和容器编排的兴起"><a href="#容器化和容器编排的兴起" class="headerlink" title="容器化和容器编排的兴起"></a>容器化和容器编排的兴起</h3></li>
+</ol>
+<p>容器化：虚拟化的改进版本</p>
+<p>区别：</p>
+<ul>
+<li>虚拟化：在硬件级别分离应用程序</li>
+<li>容器化：在操作系统级别分离硬件程序</li>
+</ul>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://extious.github.io/picx-images-hosting/%E5%9B%BE%E7%89%87.5tqr4i09vv.webp"
+                        alt="图片"
+                 ></p>
+<p>2018年起开始占据统治地位。</p>
+<h2 id="云计算云原生"><a href="#云计算云原生" class="headerlink" title="云计算&lt;-&gt;云原生"></a>云计算&lt;-&gt;云原生</h2><p>云原生就是云计算的下半场</p>
+<p>云原生不是一种架构，而是一种基础设施，运行在其上的应用称作云原生应用，只有符合云原生设计哲学的应用架构才叫做云原生架构。</p>
+<h2 id="云原生出现"><a href="#云原生出现" class="headerlink" title="云原生出现"></a>云原生出现</h2><p>由于对业务快速迭代，团队规模不断增大，产品交付速度增大的应对，微服务和云原生开始出现</p>
+<p>pivotal是云原生概念的提出者，他提出云原生包括以下四个方面</p>
+<h1 id="云原生四要素"><a href="#云原生四要素" class="headerlink" title="云原生四要素"></a>云原生四要素</h1><h2 id="微服务："><a href="#微服务：" class="headerlink" title="微服务："></a>微服务：</h2><p>几乎每个云原生的定义都包含微服务，跟微服务相对的是单体应用，微服务有理论基础，那就是康威定律，指导服务怎么切分，很玄乎，凡是能称为理论定律的都简单明白不了，不然就忒没b格，大概意思是组织架构决定产品形态，不知道跟马克思的生产关系影响生产力有无关系。</p>
+<p>微服务架构的好处就是按function切了之后，服务解耦，内聚更强，变更更易；另一个划分服务的技巧据说是依据DDD来搞。</p>
+<h2 id="容器化："><a href="#容器化：" class="headerlink" title="容器化："></a>容器化：</h2><p>Docker是应用最为广泛的容器引擎，在思科谷歌等公司的基础设施中大量使用，是基于LXC技术搞的，容器化为微服务提供实施保障，起到应用隔离作用，K8S是容器编排系统，用于容器管理，容器间的负载均衡，谷歌搞的，Docker和K8S都采用Go编写，都是好东西</p>
+<h2 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps:"></a>DevOps:</h2><p>这是个组合词，Dev+Ops，就是开发和运维合体，不像开发和产品，经常刀刃相见，实际上DevOps应该还包括测试，DevOps是一个敏捷思维，是一个沟通文化，也是组织形式，为云原生提供持续交付能力。</p>
+<h2 id="持续交付："><a href="#持续交付：" class="headerlink" title="持续交付："></a>持续交付：</h2><p>持续交付是不误时开发，不停机更新，小步快跑，反传统瀑布式开发模型，这要求开发版本和稳定版本并存，其实需要很多流程和工具支撑。</p>
+<h1 id="云原生的优点"><a href="#云原生的优点" class="headerlink" title="云原生的优点"></a>云原生的优点</h1><ol>
+<li>新兴语言编写：go，node.js</li>
+<li>支持持续频繁更新，持续交付</li>
+<li>本地部署的传统应用无法动态扩展，往往需要冗余资源以抵抗流量高峰，而云原生应用利用云的弹性自动伸缩，通过共享降本增效。</li>
+<li>本地部署的传统应用对网络资源，比如ip、端口等有依赖，甚至是硬编码，而云原生应用对网络和存储都没有这种限制。</li>
+<li>部署和运维都是自动化。</li>
+<li>不会硬连接到任何系统环境中，只依赖抽象的基础架构，有很好的移植效果</li>
+<li>模块化更加合理。</li>
+</ol>
+<h1 id="云原生的定义"><a href="#云原生的定义" class="headerlink" title="云原生的定义"></a>云原生的定义</h1><p>云原生的定义在不断的发展，它实际上是一种理论或者说是方法论。</p>
+<p>目前最为系统的云原生应用开发指南：12因素（12-Factors：<a class="link"   target="_blank" rel="noopener" href="https://12factor.net)/" >https://12factor.net）<i class="fas fa-external-link-alt"></i></a></p>
+<p>12因素为任何语言开发的后端应用服务提供好的方法论和核心思想：</p>
+<ol>
+<li>使用声明式格式搭建自动化，便于新来者加入</li>
+<li>和底层操作系统保持简约的契约，保证可移植性</li>
+<li>适合在现代的云平台上部署</li>
+<li>最小化开发和生产之间的分歧，实现持续部署以实现最大的灵活性</li>
+<li>在工具、架构和开发实践不发生重大变化的前提下实现扩展</li>
+</ol>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://extious.github.io/picx-images-hosting/%E5%9B%BE%E7%89%87.9gwas0wgjb.webp"
+                        alt="图片"
+                 ></p>
+<h1 id="云原生的基础架构"><a href="#云原生的基础架构" class="headerlink" title="云原生的基础架构"></a>云原生的基础架构</h1><ol>
+<li><h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2></li>
+</ol>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://extious.github.io/picx-images-hosting/%E5%9B%BE%E7%89%87.41xs9lhon6.webp"
+                        alt="图片"
+                 ></p>
+<p>微服务：</p>
+<ul>
+<li>优点：降低系统复杂度，独立部署，独立拓展，跨语言编程</li>
+<li>缺点：运维带来挑战，分布式系统复杂性问题</li>
+</ul>
+<ol start="2">
+<li><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2></li>
+</ol>
+<p>一个操作系统下的多个隔离，每个隔离一个容器，每个容器都有唯一的可写文件系统和资源配额</p>
+<p>特点：</p>
+<ul>
+<li>隔离应用依赖</li>
+<li>创建应用镜像并复制</li>
+<li>创建容易分发的即启即用的应用</li>
+<li>支持实例简单</li>
+<li>快速地拓展</li>
+</ul>
+<p>docker：开源应用容器引擎</p>
+<p>用户可以将为微服务及其所需的所有配置、依赖关系和环境变量打包成容器镜像，并轻松一直到全新的安装了docker的服务器节点上，运维人员无须关系底层操作系统，且无须重新配置环境，这使得容器成为部署单个微服务的最理想的工具。</p>
+<p>因为人为部署麻烦</p>
+<p>容器分为两部分：</p>
+<ul>
+<li>运行层：容器的基础设施，包括存储、网络、CPU等</li>
+<li>编排层：主要是容器集群的管理，包括容器调度，服务注册和发现，资源的管理等</li>
+</ul>
+<p>相关工具：Kubernetes</p>
+<p>Kubernetes目前基本算是统一了容器编排的市场，实现了容器集群的自动化部署，扩缩容和维护等功能，和docker相辅相成。</p>
+<ol start="3">
+<li><h2 id="服务网格"><a href="#服务网格" class="headerlink" title="服务网格"></a>服务网格</h2></li>
+</ol>
+<p>微服务技术架构：</p>
+<ul>
+<li>侵入式架构：服务框架嵌入程序代码，RPC、负载均衡、熔断等</li>
+<li>非侵入式架构：以代理的形式和应用程序部署在一起，接管应用程序的网络且对其透明，以服务网格为代表。</li>
+</ul>
+<p>为解决侵入性问题，引入了 Service Mesh</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://extious.github.io/picx-images-hosting/%E5%9B%BE%E7%89%87.7smxuu6v0y.webp"
+                        alt="图片"
+                 ></p>
+<p>Service Mesh处理服务间请求&#x2F;响应的可靠传递，并可用于服务治理、遗留系统的零入侵接入以及异构框架开发的微服务，实现了轻量级的网络代理。</p>
+<ol start="4">
+<li><h2 id="不可变基础设施和DevOps"><a href="#不可变基础设施和DevOps" class="headerlink" title="不可变基础设施和DevOps"></a>不可变基础设施和DevOps</h2></li>
+</ol>
+<p>不可变基础设施：</p>
+<p>主要强调基础设施的状态性质</p>
+<p>一旦创建基础设施的实例,其将会变成只读状态</p>
+<p>如果后续需要修改和升级，则需要使用新的实例替换旧实例</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://extious.github.io/picx-images-hosting/%E5%9B%BE%E7%89%87.7p0qn0cht.webp"
+                        alt="图片"
+                 ></p>
+<p>DevOps的目标是缩短开发周期，增加部署频率更可靠地发布升级系统应用</p>
+<p>DevOps和云原生架构的结合能够实现精益产品开发流程帮助软件产品及其开发持续改进，适应快速变化的市场从而为企业提供更小的试错成本</p>
+<ol start="5">
+<li><h2 id="声明式API"><a href="#声明式API" class="headerlink" title="声明式API"></a>声明式API</h2></li>
+</ol>
+<ul>
+<li>声明式设计：指通过向工具描述自己想要让事物达到的目标状态，然后由这个工具自己内部去计算如何令这个事物达到目标状态声明式设计中描述的是目标状态,即How</li>
+<li>过程式设计：所描述的是一系列的动作，即 What</li>
+</ul>
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/">系统架构</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="reward-author-container border-box flex-center">
+    <div class="reward-btn keep-button border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="请作者喝咖啡"
+            data-tooltip-img-url="/images/wechat.png"
+            data-tooltip-img-trigger="click"
+            data-tooltip-img-style="top: -8px;"
+    >
+        <i class="fa-solid fa-hand-holding-heart"></i>
+    </div>
+</div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/02/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
+                                   title="设计模式"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">设计模式</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/02/19/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0/"
+                                   title="微服务概述"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">微服务概述</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E5%87%BA%E7%8E%B0"><span class="nav-text">云原生的出现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E5%8F%91%E5%B1%95"><span class="nav-text">云计算的发展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF"><span class="nav-text">虚拟化技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%B8%82%E5%9C%BA%E5%8C%96%E5%BA%94%E7%94%A8"><span class="nav-text">虚拟机的市场化应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E5%8C%96%E5%92%8C%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E7%9A%84%E5%85%B4%E8%B5%B7"><span class="nav-text">容器化和容器编排的兴起</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E8%AE%A1%E7%AE%97%E4%BA%91%E5%8E%9F%E7%94%9F"><span class="nav-text">云计算&lt;-&gt;云原生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E5%87%BA%E7%8E%B0"><span class="nav-text">云原生出现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E5%9B%9B%E8%A6%81%E7%B4%A0"><span class="nav-text">云原生四要素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%9A"><span class="nav-text">微服务：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E5%8C%96%EF%BC%9A"><span class="nav-text">容器化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DevOps"><span class="nav-text">DevOps:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%EF%BC%9A"><span class="nav-text">持续交付：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text">云原生的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">云原生的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84"><span class="nav-text">云原生的基础架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="nav-text">微服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8"><span class="nav-text">容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC"><span class="nav-text">服务网格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%92%8CDevOps"><span class="nav-text">不可变基础设施和DevOps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%8FAPI"><span class="nav-text">声明式API</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Extious</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+                <span class="count-box border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">31.6k</span>
+                </span>
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E5%87%BA%E7%8E%B0"><span class="nav-text">云原生的出现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E5%8F%91%E5%B1%95"><span class="nav-text">云计算的发展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF"><span class="nav-text">虚拟化技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%B8%82%E5%9C%BA%E5%8C%96%E5%BA%94%E7%94%A8"><span class="nav-text">虚拟机的市场化应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E5%8C%96%E5%92%8C%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E7%9A%84%E5%85%B4%E8%B5%B7"><span class="nav-text">容器化和容器编排的兴起</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E8%AE%A1%E7%AE%97%E4%BA%91%E5%8E%9F%E7%94%9F"><span class="nav-text">云计算&lt;-&gt;云原生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E5%87%BA%E7%8E%B0"><span class="nav-text">云原生出现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E5%9B%9B%E8%A6%81%E7%B4%A0"><span class="nav-text">云原生四要素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%EF%BC%9A"><span class="nav-text">微服务：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E5%8C%96%EF%BC%9A"><span class="nav-text">容器化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DevOps"><span class="nav-text">DevOps:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%EF%BC%9A"><span class="nav-text">持续交付：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text">云原生的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">云原生的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%8E%9F%E7%94%9F%E7%9A%84%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84"><span class="nav-text">云原生的基础架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="nav-text">微服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8"><span class="nav-text">容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC"><span class="nav-text">服务网格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%92%8CDevOps"><span class="nav-text">不可变基础设施和DevOps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%8FAPI"><span class="nav-text">声明式API</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/lazyload.min.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+
+    <!-- photos-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.0.6/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
